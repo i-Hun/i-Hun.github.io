@@ -13,6 +13,7 @@
 
 	<title>Почему, на ваш взгляд, нужно поддерживать изучение гуманитарных&nbsp;дисциплин?</title>
 
+	<meta name="description" content="Hi! I am Oleg — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at HSE" />
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,14 +30,6 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- Feed -->
-
-	<!-- Code highlight color scheme -->
-			<link href="/theme/css/code_blocks/github.css" rel="stylesheet">
-
-
-	<!-- Custom fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,14 +50,14 @@
 				<meta name="tags" content="oxford russian fund">
 				<meta name="tags" content="scholarships">
 
-				<meta property="og:locale" content="" />
+			<meta property="fb:admins" content="100002320261122"/>
+		<meta property="og:locale" content="en_US" />
 		<meta property="og:site_name" content="Oleg Nagornyy" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Oleg Nagornyy" />
-		<meta property="og:description" content="View the blog." />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="/theme/img/background-main.jpg" />
-
+		<meta property="og:description" content="My personal website" />
+		<meta property="og:url" content="http://nagornyy.me" />
+		<meta property="og:image" content="http://nagornyy.me/theme/img/background-main.jpg" />
 
 	<meta property="og:type" content="article">
 						<meta property="article:author" content="/author/oleg-nagornyy.html">
@@ -74,6 +67,7 @@
 						<meta property="og:description" content="Эссе для конкурса на получение стипендии ОРФ 2017г.">
 
 						<meta property="og:image" content="//theme/img/background-main.jpg">
+
 </head>
 <!-- TODO : Body class -->
 <body>
@@ -84,9 +78,9 @@
 		}
 	</style>
   <div class="navbar-brand">
-    <div class="navbar-item" href="https://bulma.io">
+    <a class="navbar-item" href="/">
       <p class="is-5 title">Oleg Nagornyy</p>
-    </div>
+    </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
       <span></span>
@@ -96,9 +90,6 @@
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
 	<div class="navbar-end">
-		<a class="navbar-item" href="/">
-			Main
-		</a>
 		<a class="navbar-item" href="/category/posts">
 			Blog
 		</a>
@@ -145,39 +136,33 @@
 					</div>
 				</div>
 		</main>
-	
-	<footer id="footer">
 
-	</footer>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
 
-	<script type="text/javascript" src="/theme/js/script.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
+		// Get all "navbar-burger" elements
+		var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  // Get all "navbar-burger" elements
-  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+		// Check if there are any navbar burgers
+		if ($navbarBurgers.length > 0) {
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
+			// Add a click event on each of them
+			$navbarBurgers.forEach(function ($el) {
+				$el.addEventListener('click', function () {
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
+					// Get the target from the "data-target" attribute
+					var target = $el.dataset.target;
+					var $target = document.getElementById(target);
 
-        // Get the target from the "data-target" attribute
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
+					// Toggle the class on both the "navbar-burger" and the "navbar-menu"
+					$el.classList.toggle('is-active');
+					$target.classList.toggle('is-active');
 
-        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-        $el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
+				});
+			});
+		}
 
-      });
-    });
-  }
-
-});
-</script>
-	
+	});
+	</script>
 </body>
 </html>
