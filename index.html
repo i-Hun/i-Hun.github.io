@@ -57,27 +57,35 @@
 <!-- TODO : Body class -->
 <body>
 <nav class="navbar is-transparent">
-	<div class="navbar-brand">
-		<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
+	<style>
+		.navbar-burger span:nth-child(3) {
+		    top: calc(50% + 4px);
+		}
+	</style>
+  <div class="navbar-brand">
+    <div class="navbar-item" href="https://bulma.io">
+      <p class="is-5 title">Oleg Nagornyy</p>
+    </div>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-	<div id="navbarExampleTransparentExample" class="navbar-menu">
-		<div class="navbar-end">
-			<a class="navbar-item" href="/">
-				Main
-			</a>
-			<a class="navbar-item" href="/category/posts">
-				Blog
-			</a>
-			<a class="navbar-item" href="#contacts">
-				Contacts
-			</a>
-		</div>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+	<div class="navbar-end">
+		<a class="navbar-item" href="/">
+			Main
+		</a>
+		<a class="navbar-item" href="/category/posts">
+			Blog
+		</a>
+		<a class="navbar-item" href="/#contacts">
+			Contacts
+		</a>
 	</div>
+  </div>
 </nav>	<header class="main-header hero is-medium">
 		<div class="hero-body is-hidden-touch">
 			<div class="container">
@@ -86,7 +94,7 @@
 						<div class="my-bio card">
 							<div class="card-content">
 								<h2 class="subtitle">
-									Hi! I am Oleg Nagornyy — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at <a href="https://www.hse.ru/en/staff/oleg" target="_blank">HSE</a>. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
+									Hi! I am Oleg — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at <a href="https://www.hse.ru/en/staff/oleg" target="_blank">HSE</a>. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
 								</h2>
 							</div>
 						</div>
@@ -98,7 +106,7 @@
 			<div class="container">
 				<div class="content has-text-centered">
 					<p>
-						Hi! I am Oleg Nagornyy — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at <a href="https://www.hse.ru/en/staff/oleg" target="_blank">HSE</a>. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
+						Hi! I am Oleg — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at <a href="https://www.hse.ru/en/staff/oleg" target="_blank">HSE</a>. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
 					</p>
 				</div>
 			</div>
@@ -773,16 +781,6 @@
      	</div>
  	</div>
  	<br>
-     <div>
-     	<small>10 June 2013</small>
-     	<a href="/posts/mikrovolnovka-razrushaet-traditsiiu-semeinogo-obeda/">
-     		Микроволновка разрушает традицию семейного&nbsp;обеда
-     	</a>
-     	<div>
-            Десять минут назад, ковыряя на кухне остывший обед, свою порцию которого я не мог разогреть в микроволновке из-за отключенного электричества, мне подумалось интересная мысль — микроволновки разрушают традицию общего приема пищи, когда все члены...
-     	</div>
- 	</div>
- 	<br>
 </div>
 				<p><a href="/category/posts">See more</a></p>
 			</div>
@@ -862,6 +860,33 @@
 	</footer>
 
 	<script type="text/javascript" src="/theme/js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 	
 </body>
 </html>
